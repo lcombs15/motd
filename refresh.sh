@@ -21,9 +21,13 @@ link 35-diskspace
 link 50-fail2ban
 link 60-docker
 
+sudo chmod +x *
+
 echo Disabling system scripts in $MOTD
 disable 10-help-text
 disable 50-motd-news
 disable 50-landscape-sysinfo
+
+which lolcat || sudo apt install -y lolcat
 
 echo Done
